@@ -1,0 +1,29 @@
+@import "../../style/config";
+
+.card-container {
+  width: 200px;
+  margin: 1rem;
+  color: #fff;
+  .img-container {
+    width: 200px;
+    height: 280px;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  h1 {
+    font-size: 16px;
+    margin-top: 1rem;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    // white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 0.5rem;
+  }
+}

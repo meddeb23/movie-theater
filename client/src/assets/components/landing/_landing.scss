@@ -1,0 +1,52 @@
+@import "../../style/config";
+
+.landing {
+  // background-image: url("../images/backgroundImage.png");
+  background-image: linear-gradient(to bottom, #00000085, #000),
+    url("../images/pexels-nathan-engel-436413.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5rem;
+  h1 {
+    text-transform: uppercase;
+    max-width: 80%;
+    font-size: 64px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    background-color: $mainColor;
+    padding: 10px 24px;
+    width: fit-content;
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+
+    span {
+      text-transform: uppercase;
+      margin-left: 1rem;
+    }
+  }
+  a:hover {
+    background-color: #f52121;
+  }
+  @media screen and(max-width: 768px) {
+    h1 {
+      font-size: 48px;
+    }
+  }
+  @media screen and(max-width: 660px) {
+    padding: 1rem;
+    align-items: center;
+    h1 {
+      text-align: center;
+    }
+  }
+}
