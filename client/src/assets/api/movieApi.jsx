@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const BASE_URL = "/api/v1/movie";
 
-const useData = (url) => {
+const useData = (url, reFetch = null) => {
   const [data, setData] = useState();
   const [isLoading, setisLoading] = useState(false);
 
@@ -21,7 +21,7 @@ const useData = (url) => {
   useEffect(() => {
     console.log(`sending to ${url}`);
     getData();
-  }, []);
+  }, [reFetch]);
 
   return [data, isLoading, getData];
 };

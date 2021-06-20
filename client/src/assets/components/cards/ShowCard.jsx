@@ -9,12 +9,13 @@ export default function ShowCard({
   image,
   releaseDate,
   title,
+  media_type,
 }) {
   return (
     <div className="card-container">
       {image && (
         <div className="img-container">
-          <NavLink to={`/movie/${id}`}>
+          <NavLink to={`/${media_type}/${id}`}>
             <img src={image} alt="" />
           </NavLink>
         </div>

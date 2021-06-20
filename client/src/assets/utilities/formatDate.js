@@ -10,4 +10,12 @@ const formatDate = (stringDate, mode = "full") => {
   return `${getMonthName} ${year}`;
 };
 
-module.exports = { formatDate };
+const displayRunTime = (runTime) => {
+  const hour = parseInt(runTime / 60);
+  const min = runTime % 60;
+  let msg = hour === 0 ? "" : `${hour} h`;
+  msg = min === 0 ? "" : `${min} min`;
+  return msg;
+};
+
+module.exports = { formatDate, displayRunTime };

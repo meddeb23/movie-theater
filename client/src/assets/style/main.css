@@ -582,6 +582,13 @@ footer a {
   }
 }
 
+.detail {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .detail .head {
   height: 100vh;
   background-position: center;
@@ -597,6 +604,7 @@ footer a {
   padding: 10px;
   height: auto;
   min-height: 100vh;
+  width: 100%;
 }
 
 .detail .head .poster {
@@ -688,161 +696,6 @@ footer a {
   cursor: pointer;
 }
 
-.detail .similar {
-  overflow: hidden;
-  padding-bottom: 3rem;
-}
-
-.detail .similar .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 5rem;
-  align-items: center;
-}
-
-.detail .similar .header h1 {
-  color: #f5f5f5;
-  font-family: "Heebo", sans-serif;
-}
-
-.detail .similar .header a {
-  color: #8e8e8e;
-}
-
-.detail .similar .error {
-  text-align: center;
-}
-
-.detail .similar .list {
-  position: relative;
-}
-
-.detail .similar ul {
-  display: flex;
-  width: fit-content;
-  position: relative;
-  left: 0px;
-  transition: left 400ms ease;
-  color: #fff;
-  padding: 0 4rem;
-}
-
-.detail .similar ul li {
-  margin: 0 17px;
-}
-
-.detail .similar ul li .info {
-  margin-top: 10px;
-}
-
-.detail .similar ul li .info .review {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.detail .similar ul li .info .review .star {
-  color: #fdd835;
-}
-
-.detail .similar ul li .info .review .date {
-  color: #707070;
-}
-
-.detail .similar ul li .img {
-  position: relative;
-}
-
-.detail .similar ul li .img img {
-  height: 287px;
-  width: 185px;
-  box-shadow: 0 -1px 7px #000, 0px 8px 6px #000;
-}
-
-.detail .similar ul li .img img.overlayImg {
-  transform: scale(1.4);
-}
-
-.detail .similar ul li .img .overlay {
-  height: 287px;
-  width: 185px;
-  position: absolute;
-  background: #3c3565a6;
-  top: 0;
-  transform: scale(1.4);
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.detail .similar ul li .img .overlay .title {
-  padding: 10px 0 0 15px;
-  font-weight: 700;
-}
-
-.detail .similar ul li .img .overlay .desc {
-  padding: 10px 0 0 15px;
-  font-size: 10px;
-  color: #f5f5f5;
-  cursor: pointer;
-}
-
-.detail .similar ul li .img .overlay a {
-  display: flex;
-  margin: 1rem auto;
-  width: fit-content;
-  padding: 4px 23px 7px 23px;
-  border-radius: 30px;
-  background: #f50b0b;
-  color: #fff;
-  align-items: center;
-  box-shadow: 0 0 10px red;
-  cursor: pointer;
-}
-
-.detail .similar ul li .img .overlay .info {
-  display: flex;
-  justify-content: space-around;
-}
-
-.detail .similar ul li .img .overlay .info i {
-  cursor: pointer;
-}
-
-.detail .similar .left,
-.detail .similar .right {
-  position: absolute;
-  top: 0;
-  font-size: 28px;
-  color: #fff;
-  text-shadow: 0 0 10px #000;
-  cursor: pointer;
-  height: 287px;
-  width: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 300ms ease-in-out;
-  z-index: 60;
-}
-
-.detail .similar .left {
-  left: 0;
-  background: linear-gradient(90deg, black, transparent);
-}
-
-.detail .similar .right {
-  right: 0;
-  background: linear-gradient(-90deg, black, transparent);
-}
-
-.detail .similar .left:hover {
-  background: linear-gradient(90deg, black 60%, transparent);
-}
-
-.detail .similar .right:hover {
-  background: linear-gradient(-90deg, black 60%, transparent);
-}
-
 @media screen and (max-width: 765px) {
   .detail .head {
     padding: 6rem 0 0 0;
@@ -866,6 +719,161 @@ footer a {
   .detail .head .info .footer-info > * {
     margin: 0 1rem;
   }
+}
+
+.similar {
+  overflow: hidden;
+  padding-bottom: 3rem;
+}
+
+.similar .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  align-items: center;
+}
+
+.similar .header h1 {
+  color: #f5f5f5;
+  font-family: "Heebo", sans-serif;
+}
+
+.similar .header a {
+  color: #8e8e8e;
+}
+
+.similar .error {
+  text-align: center;
+}
+
+.similar .list {
+  position: relative;
+}
+
+.similar ul {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  left: 0px;
+  transition: left 400ms ease;
+  color: #fff;
+  padding: 0 4rem;
+}
+
+.similar ul li {
+  margin: 0 17px;
+}
+
+.similar ul li .info {
+  margin-top: 10px;
+}
+
+.similar ul li .info .review {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.similar ul li .info .review .star {
+  color: #fdd835;
+}
+
+.similar ul li .info .review .date {
+  color: #707070;
+}
+
+.similar ul li .img {
+  position: relative;
+}
+
+.similar ul li .img img {
+  height: 287px;
+  width: 185px;
+  box-shadow: 0 -1px 7px #000, 0px 8px 6px #000;
+}
+
+.similar ul li .img img.overlayImg {
+  transform: scale(1.4);
+}
+
+.similar ul li .img .overlay {
+  height: 287px;
+  width: 185px;
+  position: absolute;
+  background: #3c3565a6;
+  top: 0;
+  transform: scale(1.4);
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.similar ul li .img .overlay .title {
+  padding: 10px 0 0 15px;
+  font-weight: 700;
+}
+
+.similar ul li .img .overlay .desc {
+  padding: 10px 0 0 15px;
+  font-size: 10px;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.similar ul li .img .overlay a {
+  display: flex;
+  margin: 1rem auto;
+  width: fit-content;
+  padding: 4px 23px 7px 23px;
+  border-radius: 30px;
+  background: #f50b0b;
+  color: #fff;
+  align-items: center;
+  box-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.similar ul li .img .overlay .info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.similar ul li .img .overlay .info i {
+  cursor: pointer;
+}
+
+.similar .left,
+.similar .right {
+  position: absolute;
+  top: 0;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+  cursor: pointer;
+  height: 287px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 300ms ease-in-out;
+  z-index: 60;
+}
+
+.similar .left {
+  left: 0;
+  background: linear-gradient(90deg, black, transparent);
+}
+
+.similar .right {
+  right: 0;
+  background: linear-gradient(-90deg, black, transparent);
+}
+
+.similar .left:hover {
+  background: linear-gradient(90deg, black 60%, transparent);
+}
+
+.similar .right:hover {
+  background: linear-gradient(-90deg, black 60%, transparent);
 }
 
 a.watch-btn {

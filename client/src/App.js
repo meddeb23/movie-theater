@@ -14,10 +14,12 @@ import Footer from "./assets/components/footer";
 import Home from "./assets/screen/Home";
 import DetailPage from "./assets/screen/DetailPage";
 import SerieDetail from "./assets/screen/SerieDetail";
+import ScrollToTop from "./assets/components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <NavBar />
       <Switch>
         <Route path="/" exact component={Home} />

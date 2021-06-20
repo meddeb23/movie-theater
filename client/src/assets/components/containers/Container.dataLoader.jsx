@@ -3,6 +3,7 @@ import useData from "../../api/movieApi";
 import ShowCard from "../cards/ShowCard";
 import Slider from "../sliders/Slider";
 import { formatDate } from "../../utilities/formatDate";
+import Loader from "../Loader";
 
 export default function DataLoader({ dataUrl, color }) {
   const [data, isLoading] = useData(dataUrl);
@@ -19,6 +20,7 @@ export default function DataLoader({ dataUrl, color }) {
             // duration={formatDate(item.release_date)}
             image={`https://image.tmdb.org/t/p/w154/${item.poster_path}`}
             title={item.title}
+            media_type="movie"
             releaseDate={formatDate(item.release_date)}
           />
         ) : (
@@ -30,14 +32,13 @@ export default function DataLoader({ dataUrl, color }) {
             // duration={formatDate(item.release_date)}
             image={`https://image.tmdb.org/t/p/w154/${item.poster_path}`}
             title={item.name}
+            media_type="tv"
             releaseDate={formatDate(item.first_air_date)}
           />
         )
       )}
     </Slider>
-  ) : isLoading ? (
-    <h1 className="msg">Loading...</h1>
   ) : (
-    <h1 className="msg">Error Loading please retry later</h1>
+    <Loader isLoading={isLoading} />
   );
 }
