@@ -7,18 +7,6 @@ import { DataLoader, Warpper } from "../components/containers";
 import Categories from "../components/Categories";
 
 export default function Home() {
-  // const [searchResualt, setSearchResualt] = useState([]);
-  // const [search, setSearch] = useState(null);
-
-  // const onSearch = (search) => {
-  //   Axios.get(`/api/v1/movie/search/movie?query=${search}`)
-  //     .then((res) => {
-  //       setSearch(search);
-  //       setSearchResualt(res.data);
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
-
   return (
     <div className="home">
       <Landing />

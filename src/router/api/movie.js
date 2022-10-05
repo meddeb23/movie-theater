@@ -99,4 +99,17 @@ router.get("/tv/:showId", async (req, res, next) => {
     next(error);
   }
 });
+router.get("/search", async (req, res, next) => {
+  try {
+    const page = Math.max(1, req.query.page || 1);
+    console.log(page);
+    // Movie genres
+    const search = await Axios.get(
+      `${BASE_URL}/search/multi/?query=${req.query.q}&api_key=${API_KEY}&language=en-US`
+    );
+    res.json(search.data);
+  } catch (error) {
+    next(error);
+  }
+});
 module.exports = router;

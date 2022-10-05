@@ -1,0 +1,23 @@
+@import "../../style/config";
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 15px;
+  padding: 2rem 0;
+  .nav-box {
+    width: fit-content !important;
+    padding: 0 0.5rem;
+  }
+  .box {
+    border: 1px solid $mainColor;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}

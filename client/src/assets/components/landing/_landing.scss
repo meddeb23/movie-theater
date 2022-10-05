@@ -1,5 +1,12 @@
 @import "../../style/config";
 
+.searchLanding {
+  max-height: 300px;
+  p {
+    font-size: 18px;
+  }
+}
+
 .landing {
   // background-image: url("../images/backgroundImage.png");
   background-image: linear-gradient(to bottom, #00000085, #000),

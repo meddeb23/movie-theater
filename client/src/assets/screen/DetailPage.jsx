@@ -47,7 +47,7 @@ export default function DetailPage({ match }) {
                 </div>
               </div>
               <div className="overview">
-                <h1>The Story</h1>
+                <h3>The Story</h3>
                 <div>
                   <p>{data.overview}</p>
                   <button>read more</button>
